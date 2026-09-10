@@ -699,7 +699,7 @@ a:hover .arrow {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   text-align: left;
 }
 .alumni-table th,
@@ -743,11 +743,15 @@ a:hover .arrow {
   border-radius: 4px;
   background: #e9f0fa;
   color: #365b8c;
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   font-weight: 500;
   line-height: 1.45;
   vertical-align: top;
   overflow-wrap: normal;
+}
+.alumni-program-tag > span {
+  display: block;
+  white-space: nowrap;
 }
 .alumni-table tbody th {
   font-weight: 500;
