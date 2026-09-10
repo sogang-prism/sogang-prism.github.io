@@ -79,7 +79,7 @@ export const alumni: Alumnus[] = [
 ];
 ```
 
-`course`, `year`, `project`에 빈 문자열을 넣으면 대시로 표시합니다. `year`에는 졸업 연도를 입력하세요. 아직 명단이 없으면 `alumni: Alumnus[] = []`를 유지하세요. 석사 재학생은 사용자가 제공한 2025년 입학생 Yongwoo Lee(INZENT Co.,Ltd.), Sejin Yang(DSsolar), Ilbum Chun(KT), Riahn Kim(KIAS), Suyeon Kim(NIPA)을 Admission Year · Name · Program · Affiliation 표에 표시하며, 졸업생은 사용자가 제공한 2026년 졸업생 9명을 반영했습니다. 프로그램은 모두 MOT Master's Program입니다. 위 예시 인물은 홈페이지에 표시하지 않습니다.
+`course`, `year`, `project`에 빈 문자열을 넣으면 대시로 표시합니다. `year`에는 졸업 연도를 입력하세요. 아직 명단이 없으면 `alumni: Alumnus[] = []`를 유지하세요. 석사 재학생은 사용자가 제공한 2025년 입학생 Yongwoo Lee(INZENT Co.,Ltd.), Sejin Yang(DSsolar), Ilbum Chun(KT), Riahn Kim(KIAS), Suyeon Kim(NIPA)을 Admission Year · Name · Program · Affiliation 표에 표시하며, 졸업생은 사용자가 제공한 2026년 졸업생 13명을 반영했습니다. 프로그램은 모두 MOT Master's Program입니다. 위 예시 인물은 홈페이지에 표시하지 않습니다.
 
 ## 논문
 

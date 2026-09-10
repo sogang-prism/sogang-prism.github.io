@@ -30,6 +30,8 @@ People의 김주람 교수 이름과 사진은 내부 상세 페이지 `/people/
 
 2026-09-10 사용자가 졸업생 9명의 영문 이름과 프로젝트 제목을 직접 제공했습니다. Walmyung Byun, Sangsu Chun, HyeongSeok Lee, Seunghyun Hwang, Inho Park, Jecheol Yeon, Youngil Song, Mi-seo choe, HanLam Choi 순서로 표시합니다. 이름과 프로젝트 제목은 제공된 철자와 대소문자를 유지합니다. 사용자가 전원의 졸업 연도를 2026년으로, 프로그램을 MOT Master's Program으로 지정했습니다. Alumni 표의 열은 Graduation Year · Name · Program · Project / Thesis이며, 현재 소속은 표시하지 않습니다.
 
+2026-09-10 사용자가 Jisuk Shin, Bora Sung, Gi-beom Ko, Byung-deuk Park 네 명과 각 논문 제목을 추가로 제공하여 Alumni는 총 13명입니다. 기존 명단 뒤에 제공된 순서로 추가하며 이름과 제목은 원문을 유지합니다. 추가 네 명의 졸업 연도와 프로그램은 별도 지정이 없어 기존 명단 기준인 2026년과 MOT Master's Program을 적용했습니다.
+
 ## 연구 주제
 2026-09-10 사용자 요청으로 Research 페이지의 분야별 소개를 각 분야가 무엇을 다루는지 설명하는 한 문장으로 정리했습니다. Technology Intelligence는 이후 사용자가 지정한 문장 We analyze patents and other knowledge sources to understand how technologies evolve, converge, and create value.로 수정했습니다. Service Analytics도 사용자가 지정한 문장 We use text analytics and machine learning to understand services from the perspective of customers and other stakeholders.로 수정했습니다. 개별 논문 사례는 포함하지 않습니다. 상단 문구는 Developing analytical methods for informed decision-making.로 변경했고, 분야별 연결 논문은 기존 표시 순서의 두 편씩만 보여줍니다. Publications의 전체 논문 목록은 유지합니다.
 
