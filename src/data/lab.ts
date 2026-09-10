@@ -25,6 +25,8 @@ export interface Member {
   nativeName?: string;
   role?: string;
   group: 'professor' | 'phd-students' | 'ms-students';
+  admissionYear?: string;
+  organization?: string;
   bio?: string;
   interests?: string;
   photo?: string; // Put the file under public/, e.g. /images/people/name.jpg.
@@ -269,6 +271,20 @@ export const members: Member[] = [
         url: 'https://aibeh.sogang.ac.kr/aibeh/index.do',
       },
     ],
+  },
+  {
+    id: 'yongwoo-lee',
+    name: 'YONGWOO LEE',
+    group: 'ms-students',
+    admissionYear: '2025',
+    organization: 'INZENT Co.,Ltd.',
+  },
+  {
+    id: 'sejin-yang',
+    name: 'SEJIN YANG',
+    group: 'ms-students',
+    admissionYear: '2025',
+    organization: 'DSsolar',
   },
 ];
 
