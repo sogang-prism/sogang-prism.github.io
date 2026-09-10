@@ -303,7 +303,7 @@ export const members: Member[] = [
     group: 'ms-students',
     admissionYear: '2025',
     program: "MOT Master's Program",
-    organization: 'kias',
+    organization: 'KIAS',
   },
   {
     id: 'suyeon-kim',
