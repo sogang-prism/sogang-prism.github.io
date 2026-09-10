@@ -391,7 +391,7 @@ export const alumni: Alumnus[] = [
   },
   {
     "id": "miseo-choi",
-    "name": "Miseo Choi",
+    "name": "Mi-seo choe",
     "project": "The Impact of the AI Voucher Program on Firms’ Economic Performance",
     "year": "2026",
     "course": "MOT Master's Program"
