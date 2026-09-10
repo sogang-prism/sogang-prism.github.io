@@ -429,6 +429,34 @@ export const alumni: Alumnus[] = [
     "project": "Assessing the Adequacy of Corporate Cybersecurity Investment and Developing Future Strategies through an Analysis of National Cybersecurity R&D Trends",
     "year": "2026",
     "course": "MOT Master's Program"
+  },
+  {
+    "id": "jisuk-shin",
+    "name": "Jisuk Shin",
+    "project": "Development of a Production Planning Optimization Model for Small and Medium-Sized Elevator Manufacturers",
+    "year": "2026",
+    "course": "MOT Master's Program"
+  },
+  {
+    "id": "bora-sung",
+    "name": "Bora Sung",
+    "project": "Structural Relationships among Barriers to Generative AI Adoption: Evidence from the Telecommunications Industry",
+    "year": "2026",
+    "course": "MOT Master's Program"
+  },
+  {
+    "id": "gi-beom-ko",
+    "name": "Gi-beom Ko",
+    "project": "Identifying Effective Training Approaches for Newly Hired Telecommunications Sales Employees: An Analysis of Training and Early Job Performance",
+    "year": "2026",
+    "course": "MOT Master's Program"
+  },
+  {
+    "id": "byung-deuk-park",
+    "name": "Byung-deuk Park",
+    "project": "Relationships among Buyer Price-Reduction Pressure, External Collaboration Networks, Internal R&D Capabilities, and Technological Innovation Performance in SMEs and Venture Firms",
+    "year": "2026",
+    "course": "MOT Master's Program"
   }
 ];
 
