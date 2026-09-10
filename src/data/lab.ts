@@ -39,8 +39,8 @@ export interface Alumnus {
   id: string;
   name: string;
   course: string;
+  year: string;
   project: string;
-  current: string;
 }
 
 export interface Publication {
