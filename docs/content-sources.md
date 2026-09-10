@@ -24,7 +24,7 @@ People의 김주람 교수 이름과 사진은 내부 상세 페이지 `/people/
 
 ## 재학생
 
-2026-09-10 사용자가 석사 재학생 YONGWOO LEE(INZENT Co.,Ltd.)와 SEJIN YANG(DSsolar)을 직접 제공했습니다. 두 학생의 입학 연도는 2025년이며, M.S. Students에 Admission Year · Name · Affiliation 순서로 표시합니다. 이름과 회사명은 제공된 표기를 유지합니다.
+2026-09-10 사용자가 석사 재학생 Yongwoo Lee(INZENT Co.,Ltd.), Sejin Yang(DSsolar), Ilbum Chun(KT), Riahn Kim(kias), Suyeon Kim(NIPA)을 직접 제공했습니다. 다섯 학생의 입학 연도는 모두 2025년이며, M.S. Students에 Admission Year · Name · Program · Affiliation 순서로 표시합니다. 프로그램은 모두 MOT Master's Program이며 Alumni와 같은 두 줄 태그로 표시합니다. 사용자 요청에 따라 이름과 성의 첫 글자만 대문자로, 나머지는 소문자로 표기합니다. 기관명은 제공된 표기를 유지합니다.
 
 ## 졸업생
 
