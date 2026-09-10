@@ -720,7 +720,7 @@ a:hover .arrow {
   letter-spacing: 0.04em;
 }
 .alumni-table thead th:nth-child(1) {
-  width: 12%;
+  width: 18%;
 }
 .alumni-table thead th:nth-child(2) {
   width: 20%;
@@ -729,7 +729,7 @@ a:hover .arrow {
   width: 16%;
 }
 .alumni-table thead th:nth-child(4) {
-  width: 52%;
+  width: 46%;
 }
 .alumni-table tbody th {
   font-weight: 500;
