@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160" role="img" aria-label="Technology Intelligence: selecting a promising technology from connected knowledge domains">
+  <g fill="#bbc8dc">
+    <circle cx="30" cy="42" r="5.5"/><circle cx="52" cy="42" r="5.5"/>
+    <circle cx="30" cy="64" r="5.5"/><circle cx="52" cy="64" r="5.5"/>
+    <circle cx="30" cy="86" r="5.5"/><circle cx="52" cy="86" r="5.5"/>
+    <circle cx="108" cy="42" r="5.5"/><circle cx="130" cy="42" r="5.5"/>
+    <circle cx="108" cy="64" r="5.5"/><circle cx="130" cy="64" r="5.5"/>
+    <circle cx="108" cy="86" r="5.5"/><circle cx="130" cy="86" r="5.5"/>
+    <circle cx="178" cy="42" r="5.5"/>
+    <circle cx="178" cy="70" r="5.5"/><circle cx="206" cy="70" r="5.5"/>
+    <circle cx="178" cy="98" r="5.5"/><circle cx="206" cy="98" r="5.5"/>
+  </g>
+  <path d="M52 64H108L130 86L178 70L206 42" fill="none" stroke="#7ba1df" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#7ba1df"><circle cx="52" cy="64" r="6"/><circle cx="108" cy="64" r="6"/><circle cx="130" cy="86" r="6"/><circle cx="178" cy="70" r="6"/></g>
+  <circle cx="206" cy="42" r="15" fill="white" stroke="#315cca" stroke-width="2"/>
+  <circle cx="206" cy="42" r="7.5" fill="#315cca"/>
+</svg>

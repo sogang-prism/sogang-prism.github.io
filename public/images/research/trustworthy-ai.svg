@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160" role="img" aria-label="A10 투명한 시스템: 내부 경로가 보이는 삼각형 분석 모델">
+          <path d="M121 21L57 136H185Z" fill="#edf2fa"/><path d="M121 21L57 136H185Z" fill="none" stroke="#7ba1df" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M26 95L85 83L120 54L154 92L211 95M85 83L102 119L154 92M120 54L121 100L154 92" fill="none" stroke="#bbc8dc" stroke-width="2"/>
+          <path d="M26 95L85 83L121 100L154 92L211 95" fill="none" stroke="#315cca" stroke-width="3"/>
+          <g fill="#7ba1df"><circle cx="120" cy="54" r="5"/><circle cx="102" cy="119" r="5"/></g><g fill="#315cca"><circle cx="26" cy="95" r="6"/><circle cx="85" cy="83" r="6"/><circle cx="121" cy="100" r="6"/><circle cx="154" cy="92" r="6"/><circle cx="211" cy="95" r="8"/></g>
+        </svg>
