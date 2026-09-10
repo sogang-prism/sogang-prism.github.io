@@ -1,0 +1,114 @@
+---
+interface Props {
+  email: string;
+  subject?: string;
+  label?: string;
+  compact?: boolean;
+}
+const {
+  email,
+  subject = '',
+  label = 'Show email address',
+  compact = false,
+} = Astro.props;
+// Obfuscation only: this prevents a plain address in the initial HTML.
+// A determined scraper can still decode it; no secret is stored in the browser.
+const encoded = btoa(
+  Array.from(new TextEncoder().encode(email), (byte) =>
+    String.fromCharCode(byte),
+  ).join(''),
+);
+---
+
+<email-contact
+  data-address={encoded}
+  data-subject={subject}
+  class:list={{ 'email-compact': compact }}
+>
+  <button class="email-reveal-button" type="button" hidden
+    >{label} <span aria-hidden="true">↗</span></button
+  >
+  <noscript
+    ><span class="email-noscript"
+      >Enable JavaScript to view this email address.</span
+    ></noscript
+  >
+</email-contact>
+
+<script>
+  class EmailContact extends HTMLElement {
+    connectedCallback() {
+      const button = this.querySelector<HTMLButtonElement>('button');
+      if (!button || button.dataset.ready) return;
+      button.dataset.ready = 'true';
+      button.hidden = false;
+      button.addEventListener(
+        'click',
+        () => {
+          const encoded = this.dataset.address;
+          if (!encoded) return;
+          const bytes = Uint8Array.from(atob(encoded), (character) =>
+            character.charCodeAt(0),
+          );
+          const address = new TextDecoder().decode(bytes);
+          const subject = this.dataset.subject;
+          const link = document.createElement('a');
+          link.className = 'email-revealed';
+          link.href =
+            'mailto:' +
+            address +
+            (subject ? '?subject=' + encodeURIComponent(subject) : '');
+          link.textContent = address.replace('@', ' [at] ');
+          button.replaceWith(link);
+          this.removeAttribute('data-address');
+          link.focus();
+        },
+        { once: true },
+      );
+    }
+  }
+
+  if (!customElements.get('email-contact')) {
+    customElements.define('email-contact', EmailContact);
+  }
+</script>
+
+<style>
+  email-contact {
+    display: inline-block;
+    max-width: 100%;
+  }
+  .email-reveal-button {
+    appearance: none;
+    border: 0;
+    border-bottom: 1px solid currentColor;
+    padding: 4px 0;
+    background: transparent;
+    color: var(--blue);
+    cursor: pointer;
+    font: inherit;
+    line-height: 1.6;
+    text-align: left;
+  }
+  .email-reveal-button span {
+    margin-left: 7px;
+    font-size: 0.875em;
+  }
+  .email-reveal-button[hidden] {
+    display: none;
+  }
+  .email-reveal-button:hover {
+    color: var(--ink);
+  }
+  .email-compact {
+    font-size: 0.875rem;
+  }
+  .email-noscript {
+    font-size: 0.875rem;
+    color: var(--muted);
+  }
+  email-contact :global(.email-revealed) {
+    color: var(--blue);
+    overflow-wrap: anywhere;
+  }
+</style>

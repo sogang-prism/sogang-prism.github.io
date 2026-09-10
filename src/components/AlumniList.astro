@@ -1,0 +1,40 @@
+---
+import type { Alumnus } from '../data/lab';
+interface Props {
+  alumni: Alumnus[];
+}
+const { alumni } = Astro.props;
+---
+
+<div class="alumni-table-wrap">
+  <table class="alumni-table" aria-labelledby="alumni">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Course</th>
+        <th scope="col">Project</th>
+        <th scope="col">Current</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        alumni.length > 0 ? (
+          alumni.map((person) => (
+            <tr id={person.id}>
+              <th scope="row">{person.name}</th>
+              <td>{person.course || '—'}</td>
+              <td>{person.project || '—'}</td>
+              <td>{person.current || '—'}</td>
+            </tr>
+          ))
+        ) : (
+          <tr>
+            <td class="people-empty" colspan="4">
+              Alumni information will be added soon.
+            </td>
+          </tr>
+        )
+      }
+    </tbody>
+  </table>
+</div>

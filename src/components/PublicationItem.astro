@@ -1,0 +1,39 @@
+---
+import type { Publication } from '../data/lab';
+import { sitePath } from '../lib/links';
+import Arrow from './Arrow.astro';
+interface Props {
+  paper: Publication;
+}
+const { paper } = Astro.props;
+const links = [
+  { label: 'DOI', url: paper.doi },
+  { label: 'Scholar', url: paper.scholar },
+  { label: 'PDF', url: paper.pdf },
+  { label: 'Code', url: paper.code },
+].filter((link) => link.url);
+---
+
+<article class="publication" id={paper.id}>
+  <p class="publication-year">{paper.year}</p>
+  <div class="publication-body">
+    <h3>{paper.title}</h3>
+    <p class="publication-authors">{paper.authors}</p>
+    <p class="publication-venue">{paper.venue}</p>
+    {
+      links.length > 0 && (
+        <div class="publication-links">
+          {links.map((link) => (
+            <a
+              href={sitePath(link.url!)}
+              aria-label={`${link.label}: ${paper.title}`}
+            >
+              {link.label}
+              <Arrow external />
+            </a>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</article>

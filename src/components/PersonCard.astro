@@ -1,0 +1,109 @@
+---
+import type { Member } from '../data/lab';
+import { sitePath } from '../lib/links';
+import EmailContact from './EmailContact.astro';
+import AffiliationLinks from './AffiliationLinks.astro';
+interface Props {
+  member: Member;
+}
+const { member } = Astro.props;
+const initials = member.name
+  .split(/\s+/)
+  .filter(Boolean)
+  .slice(0, 2)
+  .map((word) => word[0])
+  .join('');
+const profileHref = member.profileUrl ? sitePath(member.profileUrl) : undefined;
+const PhotoWrapper = profileHref ? 'a' : 'div';
+---
+
+<article class="person-card" id={member.id}>
+  <PhotoWrapper
+    class="person-photo-wrap"
+    href={profileHref}
+    aria-label={profileHref ? 'View ' + member.name + ' profile' : undefined}
+  >
+    {
+      member.photo ? (
+        <img
+          class="person-photo"
+          src={sitePath(member.photo)}
+          alt={member.name}
+          width="240"
+          height="320"
+          loading="lazy"
+        />
+      ) : (
+        <div class="person-photo person-initials" aria-hidden="true">
+          {initials}
+        </div>
+      )
+    }
+  </PhotoWrapper>
+  <div>
+    <h3>
+      {
+        profileHref ? (
+          <a class="person-name-link" href={profileHref}>
+            {member.name}
+            {member.nativeName && (
+              <span class="native-name" lang="ko">
+                {member.nativeName}
+              </span>
+            )}
+            <span class="profile-name-arrow" aria-hidden="true">
+              →
+            </span>
+          </a>
+        ) : (
+          <>
+            {member.name}
+            {member.nativeName && (
+              <span class="native-name" lang="ko">
+                {member.nativeName}
+              </span>
+            )}
+          </>
+        )
+      }
+    </h3>
+    {member.role && <p class="person-role">{member.role}</p>}
+    {!profileHref && member.bio && <p class="person-bio">{member.bio}</p>}
+    {
+      !profileHref && member.interests && (
+        <p class="person-bio">
+          <strong>Research interests:</strong> {member.interests}
+        </p>
+      )
+    }
+    {
+      (member.email || member.website) && (
+        <div class="person-links">
+          {member.email && <EmailContact email={member.email} compact />}
+          {member.website && (
+            <a href={member.website}>{member.websiteLabel || 'Website'} ↗</a>
+          )}
+        </div>
+      )
+    }
+    {
+      member.affiliations && (
+        <AffiliationLinks links={member.affiliations} compact />
+      )
+    }
+  </div>
+</article>
+
+<style>
+  .person-photo-wrap {
+    display: block;
+  }
+  .person-name-link:hover {
+    color: var(--blue);
+  }
+  .profile-name-arrow {
+    margin-left: 10px;
+    color: var(--blue);
+    font-size: 0.75em;
+  }
+</style>

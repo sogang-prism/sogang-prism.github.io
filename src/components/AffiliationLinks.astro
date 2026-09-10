@@ -1,0 +1,76 @@
+---
+import type { Member } from '../data/lab';
+import Arrow from './Arrow.astro';
+interface Props {
+  links: NonNullable<Member['affiliations']>;
+  compact?: boolean;
+}
+const { links, compact = false } = Astro.props;
+---
+
+<ul
+  class:list={['affiliation-links', { 'affiliation-links-compact': compact }]}
+>
+  {
+    links.map((link) => (
+      <li>
+        <a
+          href={link.url}
+          aria-label={compact && link.shortLabel ? link.label : undefined}
+        >
+          {compact ? link.shortLabel || link.label : link.label}
+          {!compact && <Arrow external />}
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .affiliation-links {
+    display: grid;
+    gap: 5px;
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+    font-size: 0.875rem;
+    line-height: 1.65;
+  }
+  .affiliation-links a {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    max-width: 100%;
+    color: var(--blue);
+  }
+  .affiliation-links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .affiliation-links :global(.arrow) {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+  }
+  .affiliation-links-compact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    font-size: 0.8125rem;
+  }
+  .affiliation-links-compact li {
+    display: flex;
+    align-items: baseline;
+  }
+  .affiliation-links-compact li + li::before {
+    content: '·';
+    margin-right: 12px;
+    color: var(--muted);
+  }
+  .affiliation-links-compact a {
+    color: var(--muted);
+  }
+  .affiliation-links-compact a:hover {
+    color: var(--blue);
+  }
+</style>

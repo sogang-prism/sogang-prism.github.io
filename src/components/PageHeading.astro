@@ -1,0 +1,16 @@
+---
+import { lab } from '../data/lab';
+interface Props {
+  number: string;
+  title: string;
+  description?: string;
+  showDot?: boolean;
+}
+const { number, title, description, showDot = true } = Astro.props;
+---
+
+<header class="page-heading">
+  <p class="eyebrow"><span>{number}</span> / {lab.name}</p>
+  <h1>{title}{showDot && <span class="title-dot">.</span>}</h1>
+  {description && <p class="page-description">{description}</p>}
+</header>
