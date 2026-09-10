@@ -45,7 +45,7 @@ npm run preview
 | 사진과 공개 PDF                           | `public/images/`, `public/papers/` |
 | 색상과 레이아웃                           | `src/styles/global.css`            |
 
-현재 `draft: false`이며, 사용자가 제공한 서강대 교수 소개와 Google Scholar를 바탕으로 김주람 교수의 정보, 학술지 논문 16편, 연구과제 5건, 인력양성사업 1건을 반영했습니다. 출처와 편집 기준은 `docs/content-sources.md`에 정리했습니다.
+현재 `draft: false`이며, 사용자가 제공한 서강대 교수 소개와 Google Scholar를 바탕으로 김주람 교수의 정보, 학술지 논문 16편, 연구과제 10건, 인력양성사업 1건을 반영했습니다. 출처와 편집 기준은 `docs/content-sources.md`에 정리했습니다.
 
 필요하면 `draft: true`로 검토용 표시를 켤 수 있습니다. `draft: false`일 때:
 
