@@ -26,6 +26,7 @@ export interface Member {
   role?: string;
   group: 'professor' | 'phd-students' | 'ms-students';
   admissionYear?: string;
+  program?: string;
   organization?: string;
   bio?: string;
   interests?: string;
@@ -274,17 +275,43 @@ export const members: Member[] = [
   },
   {
     id: 'yongwoo-lee',
-    name: 'YONGWOO LEE',
+    name: 'Yongwoo Lee',
     group: 'ms-students',
     admissionYear: '2025',
+    program: "MOT Master's Program",
     organization: 'INZENT Co.,Ltd.',
   },
   {
     id: 'sejin-yang',
-    name: 'SEJIN YANG',
+    name: 'Sejin Yang',
     group: 'ms-students',
     admissionYear: '2025',
+    program: "MOT Master's Program",
     organization: 'DSsolar',
+  },
+  {
+    id: 'ilbum-chun',
+    name: 'Ilbum Chun',
+    group: 'ms-students',
+    admissionYear: '2025',
+    program: "MOT Master's Program",
+    organization: 'KT',
+  },
+  {
+    id: 'riahn-kim',
+    name: 'Riahn Kim',
+    group: 'ms-students',
+    admissionYear: '2025',
+    program: "MOT Master's Program",
+    organization: 'kias',
+  },
+  {
+    id: 'suyeon-kim',
+    name: 'Suyeon Kim',
+    group: 'ms-students',
+    admissionYear: '2025',
+    program: "MOT Master's Program",
+    organization: 'NIPA',
   },
 ];
 
