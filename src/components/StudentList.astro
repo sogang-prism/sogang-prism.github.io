@@ -1,0 +1,70 @@
+---
+import type { Member } from '../data/lab';
+interface Props {
+  students: Member[];
+  labelledBy: string;
+}
+const { students, labelledBy } = Astro.props;
+---
+
+<div class="student-table-wrap">
+  <table class="student-table" aria-labelledby={labelledBy}>
+    <thead>
+      <tr>
+        <th scope="col">Admission Year</th>
+        <th scope="col">Name</th>
+        <th scope="col">Affiliation</th>
+      </tr>
+    </thead>
+    <tbody>
+      {students.map((student) => (
+        <tr id={student.id}>
+          <td>{student.admissionYear || '—'}</td>
+          <th scope="row">{student.name}</th>
+          <td>{student.organization || '—'}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<style>
+  .student-table-wrap {
+    overflow-x: auto;
+  }
+  .student-table {
+    width: 100%;
+    min-width: 360px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-size: 0.8125rem;
+    text-align: left;
+  }
+  th, td {
+    padding: 12px 12px 12px 0;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  th:last-child, td:last-child {
+    padding-right: 0;
+    overflow-wrap: anywhere;
+  }
+  thead th {
+    color: var(--muted);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  thead th:nth-child(1) {
+    width: 90px;
+  }
+  thead th:nth-child(2) {
+    width: 144px;
+  }
+  tbody th {
+    font-weight: 500;
+  }
+  td {
+    color: var(--muted);
+  }
+</style>

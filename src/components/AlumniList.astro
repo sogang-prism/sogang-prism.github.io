@@ -25,7 +25,11 @@ const { alumni } = Astro.props;
               <th scope="row">{person.name}</th>
               <td>
                 {person.course ? (
-                  <span class="alumni-program-tag">{person.course}</span>
+                  <span class="alumni-program-tag">
+                    {person.course === "MOT Master's Program" ? (
+                      <><span>MOT</span>{' '}<span>Master's Program</span></>
+                    ) : person.course}
+                  </span>
                 ) : (
                   '—'
                 )}
