@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import PageHeading from '../components/PageHeading.astro';
 import PersonCard from '../components/PersonCard.astro';
 import AlumniList from '../components/AlumniList.astro';
+import StudentList from '../components/StudentList.astro';
 import { members, alumni } from '../data/lab';
 const groups = [
   { id: 'professor', title: 'Professor' },
@@ -22,7 +23,9 @@ const groups = [
             <h2 class="group-heading" id={group.id}>
               {group.title}
             </h2>
-            {people.length > 0 ? (
+            {people.length > 0 && group.id !== 'professor' ? (
+              <StudentList students={people} labelledBy={group.id} />
+            ) : people.length > 0 ? (
               <div
                 class:list={[
                   'person-grid',
