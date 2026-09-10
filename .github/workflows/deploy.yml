@@ -1,0 +1,59 @@
+name: Deploy PRISM Lab to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v7
+      - name: Determine Pages URL
+        id: pages-url
+        shell: bash
+        env:
+          CUSTOM_SITE_URL: ${{ vars.SITE_URL }}
+          CUSTOM_BASE_PATH: ${{ vars.BASE_PATH }}
+        run: |
+          node --input-type=module <<'NODE'
+          import { appendFileSync } from 'node:fs';
+          const owner = process.env.GITHUB_REPOSITORY_OWNER;
+          const repo = process.env.GITHUB_REPOSITORY.split('/')[1];
+          const isRoot = repo.toLowerCase() === owner.toLowerCase() + '.github.io';
+          const customSite = process.env.CUSTOM_SITE_URL;
+          const site = customSite || 'https://' + owner.toLowerCase() + '.github.io';
+          const base = process.env.CUSTOM_BASE_PATH || (customSite || isRoot ? '/' : '/' + repo);
+          appendFileSync(process.env.GITHUB_OUTPUT, 'site=' + site + '\nbase=' + base + '\n');
+          NODE
+      - name: Install, validate, build, and upload
+        uses: withastro/action@v6
+        with:
+          node-version: 24
+          build-cmd: npm run check && npm run build && npm run verify
+        env:
+          SITE_URL: ${{ steps.pages-url.outputs.site }}
+          BASE_PATH: ${{ steps.pages-url.outputs.base }}
+          ASTRO_TELEMETRY_DISABLED: '1'
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v5
