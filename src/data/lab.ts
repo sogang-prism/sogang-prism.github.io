@@ -322,8 +322,72 @@ export const juramProfile: {
   ],
 };
 
-// Add verified alumni records here. See docs/content-examples.md.
-export const alumni: Alumnus[] = [];
+// Alumni records supplied by the professor. See docs/content-examples.md.
+export const alumni: Alumnus[] = [
+  {
+    "id": "walmyung-byun",
+    "name": "Walmyung Byun",
+    "project": "An Empirical Game-Theoretic Analysis of Technology Credit Bureau (TCB) Strategy Selection and Bank Responses: Changes in Market Structure during Policy Introduction",
+    "year": "2026",
+    "course": "MOT Master's Program"
+  },
+  {
+    "id": "sangsu-chun",
+    "name": "Sangsu Chun",
+    "project": "Quantifying Semantic and Structural Discrepancies between LLM-Generated and Authentic Customer Reviews",
+    "year": "2026",
+    "course": "MOT Master's Program"
+  },
+  {
+    "id": "hyeongseok-lee",
+    "name": "HyeongSeok Lee",
+    "project": "Identifying Firm-Specific Core Technology Opportunities for Achieving Market Leadership in the Carbon Nanotube (CNT)-Based X-Ray Market",
+    "year": "2026",
+    "course": "MOT Master's Program"
+  },
+  {
+    "id": "seunghyun-hwang",
+    "name": "Seunghyun Hwang",
+    "project": "A Framework for Recommending Candidate Technology Transferees Based on Technological Similarity and Complementarity",
+    "year": "2026",
+    "course": "MOT Master's Program"
+  },
+  {
+    "id": "inho-park",
+    "name": "Inho Park",
+    "project": "Risk Factor Analysis of the Last-Mile Delivery Process Using FMEA",
+    "year": "2026",
+    "course": "MOT Master's Program"
+  },
+  {
+    "id": "jecheol-yeon",
+    "name": "Jecheol Yeon",
+    "project": "Performance and Reliability Validation of an LLM-Based Technology Valuation Model Using a Multi-Agent Critique Loop",
+    "year": "2026",
+    "course": "MOT Master's Program"
+  },
+  {
+    "id": "youngil-song",
+    "name": "Youngil Song",
+    "project": "Development of a Region-Specific R&D Evaluation Model: An AHP-Based Expert Assessment Approach",
+    "year": "2026",
+    "course": "MOT Master's Program"
+  },
+  {
+    "id": "miseo-choi",
+    "name": "Miseo Choi",
+    "project": "The Impact of the AI Voucher Program on Firms’ Economic Performance",
+    "year": "2026",
+    "course": "MOT Master's Program"
+  },
+  {
+    "id": "hanlam-choi",
+    "name": "HanLam Choi",
+    "project": "Assessing the Adequacy of Corporate Cybersecurity Investment and Developing Future Strategies through an Analysis of National Cybersecurity R&D Trends",
+    "year": "2026",
+    "course": "MOT Master's Program"
+  }
+];
 
 export const publications: Publication[] = [
   {
