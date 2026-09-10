@@ -177,6 +177,40 @@ export const projects: Project[] = [
     note: 'Collaborative research',
   },
   {
+    id: 'data-valuation-framework',
+    title: 'Developing a Data Valuation Framework',
+    period: '2023 – 2024',
+    funder: 'Korea Institute of Science and Technology Information (KISTI)',
+  },
+  {
+    id: 'data-valuation-guidelines',
+    title: 'Developing Data Valuation Guidelines',
+    period: '2023',
+    funder: 'Korea Data Agency (K-DATA)',
+  },
+  {
+    id: 'purpose-specific-ip-valuation-models',
+    title:
+      'Developing Purpose-Specific Models for Intellectual Property Valuation',
+    period: '2023',
+    funder: 'Korea Invention Promotion Association (KIPA)',
+  },
+  {
+    id: 'explainable-ai-patent-renewal',
+    title:
+      'Developing an Explainable AI-Based Decision Support Model for Patent Renewal',
+    period: '2023',
+    funder: 'Korea Institute of Science and Technology Information (KISTI)',
+    note: 'Principal Investigator',
+  },
+  {
+    id: 'translational-research-technology-seeds',
+    title:
+      'Developing a System for Identifying Technology Seeds for Translational Research',
+    period: '2021 – 2023',
+    funder: 'Commercialization Promotion Agency for R&D Outcomes (COMPA)',
+  },
+  {
     id: 'explainable-ai-technology-valuation',
     title:
       'Developing an Explainable AI-Based Methodology for Valuing Promising Technologies and Identifying Key Factors',
