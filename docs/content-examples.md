@@ -19,7 +19,7 @@ export const research: ResearchTheme[] = [
 
 ## 프로젝트
 
-연구과제는 `projects` 배열에, 인력양성사업은 같은 항목 구조의 `educationPrograms` 배열에 추가합니다. 화면에서는 Research Projects와 Education & Training Programs로 구분하며, 각 배열의 입력 순서대로 표시됩니다. 현재 공개된 연구과제 4건을 반영했고, 인력양성사업은 사용자가 정보를 제공할 때까지 빈 배열로 유지합니다. 각 사업의 영문 제목은 지원기관의 공식 표기를 우선합니다.
+연구과제는 `projects` 배열에, 인력양성사업은 같은 항목 구조의 `educationPrograms` 배열에 추가합니다. 화면에서는 Research Projects와 Education & Training Programs로 구분하며, 각 배열의 입력 순서대로 표시됩니다. 현재 연구과제 10건과 인력양성사업 1건을 반영했습니다. 각 사업의 영문 제목은 지원기관의 공식 표기를 우선합니다.
 
 ```ts
 export const projects: Project[] = [

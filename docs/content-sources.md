@@ -44,6 +44,20 @@ People의 김주람 교수 이름과 사진은 내부 상세 페이지 `/people/
 
 위 4건의 영문 과제명은 원문을 번역한 것으로, 별도로 확인된 공식 영문 과제명이 아닙니다. 기간은 월까지 유지하며 시작 시점이 최근인 순서로 표시합니다. 기후기술 과제의 공동연구 표시는 Collaborative research로 옮겼습니다. 2026-09-10 사용자 확인에 따라 2026.09–2029.08, 2021.05–2023.04, 2021.06–2021.11, 2019.09–2020.08의 네 과제에는 연구책임자 역할을 Principal Investigator로 표시합니다. 과제번호, 예산, 성과는 추가하지 않았습니다. 서강대 부임 이전 과제도 교수의 연구 이력에 포함된 과제로 수록합니다.
 
+2026-09-10 사용자가 다음 연구과제 5건의 제목, 기간, 기관 및 연구책임자 여부를 직접 제공했습니다. 기간은 제공된 연도까지만 표시하며, 영문 과제명은 홈페이지용 번역입니다.
+
+| 기간 | 원문 과제명 | 기관 | 역할 표시 |
+| --- | --- | --- | --- |
+| 2021–2023 | 중개연구 기술 Seed 발굴 시스템 개발 | 과학기술사업화진흥원 | 별도 표시 없음 |
+| 2023–2024 | 데이터 가치평가 체계 구축 사업 | 한국과학기술정보연구원 | 별도 표시 없음 |
+| 2023 | 데이터 가치평가 가이드 개발 | 한국데이터산업진흥원 | 별도 표시 없음 |
+| 2023 | IP가치평가 평가목적별 맞춤화 모델 개발 연구 | 한국발명진흥회 | 별도 표시 없음 |
+| 2023 | 특허 유지 결정을 위한 설명 가능한 인공지능 기반의 의사 결정 지원 모델 개발 | 한국과학기술정보연구원 | Principal Investigator |
+
+새로 추가한 과제 중 특허 유지 결정 과제에만 Principal Investigator를 표시합니다. 나머지 네 건에는 연구책임자나 그 밖의 역할을 추정해 넣지 않았습니다. 기존 과제의 역할 표시는 유지합니다.
+
+기관 영문명 참고: [한국데이터산업진흥원](https://www.kdata.or.kr/)의 Korea Data Agency, [한국발명진흥회 영문 소개](https://www.kipa.org/eng/intro.html)의 Korea Invention Promotion Association. COMPA는 [경북대학교의 공동 행사 안내](https://en.knu.ac.kr/board/news01.htm?mode=view&mv_data=aWR4PTI4MDgmc3RhcnRQYWdlPSZsaXN0Tm89JnRhYmxlPWNzX2Jic19kYXRhJmNvZGU9ZU5ld3Mmc2VhcmNoX2l0ZW09JnNlYXJjaF9vcmRlcj0%3D)에 사용된 Commercialization Promotion Agency for R&D Outcomes로 표기합니다.
+
 ## 교육·인력양성 사업
 
 2026-09-10 사용자가 제공한 정보로 Education & Training Programs에 **글로벌 첨단전략산업 기술경영 전문인력 양성 사업**을 추가했습니다. 기간은 **2025–2030년**, 기관은 **한국산업기술진흥원 / Korea Institute for Advancement of Technology (KIAT)**입니다. 사업명은 홈페이지에서 Global Talent Development Program in Technology Management for Advanced Strategic Industries로 번역해 표시하며, 별도로 확인된 공식 영문 사업명은 아닙니다. 시작·종료 월, 사업 내 역할 및 예산은 추가하지 않았습니다.
