@@ -1,0 +1,221 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AffiliationLinks from '../../components/AffiliationLinks.astro';
+import EmailContact from '../../components/EmailContact.astro';
+import Arrow from '../../components/Arrow.astro';
+import { lab, members, juramProfile } from '../../data/lab';
+import { sitePath } from '../../lib/links';
+const professor = members.find((member) => member.id === juramProfile.memberId);
+if (!professor) throw new Error('Juram Kim member profile is missing.');
+const sections = [
+  { id: 'education', title: 'Education', entries: juramProfile.education },
+  { id: 'experience', title: 'Experience', entries: juramProfile.experience },
+];
+---
+
+<Layout
+  title={professor.name}
+  active="people"
+  description="Education, experience, and research interests of Juram Kim, Assistant Professor at Sogang University."
+>
+  <div class="profile-page">
+    <a class="profile-back" href={sitePath('people/#juram-kim')}
+      ><span aria-hidden="true">←</span> All people</a
+    >
+    <header class="profile-header">
+      {
+        professor.photo && (
+          <img
+            class="profile-photo"
+            src={sitePath(professor.photo)}
+            alt={professor.name}
+            width="180"
+            height="240"
+          />
+        )
+      }
+      <div>
+        <p class="eyebrow">Professor</p>
+        <h1>
+          {professor.name}{
+            professor.nativeName && (
+              <span class="native-name" lang="ko">
+                {professor.nativeName}
+              </span>
+            )
+          }
+        </h1>
+        <p class="profile-role">{professor.role}</p>
+        {
+          professor.affiliations && (
+            <AffiliationLinks links={professor.affiliations} />
+          )
+        }
+        <div class="profile-links">
+          {professor.email && <EmailContact email={professor.email} compact />}
+          {
+            lab.scholar && (
+              <a class="text-link" href={lab.scholar}>
+                Google Scholar <Arrow external />
+              </a>
+            )
+          }
+        </div>
+      </div>
+    </header>
+    {
+      professor.interests && (
+        <section
+          class="profile-section interests-section"
+          aria-labelledby="profile-interests"
+        >
+          <h2 id="profile-interests">Research Interests</h2>
+          <p>{professor.interests}</p>
+        </section>
+      )
+    }
+    {
+      sections.map((section) => (
+        <section class="profile-section" aria-labelledby={section.id}>
+          <h2 id={section.id}>{section.title}</h2>
+          <ol class="profile-history">
+            {section.entries.map((entry) => (
+              <li>
+                <p class="history-period">{entry.period}</p>
+                <div>
+                  <h3>{entry.title}</h3>
+                  <p class="history-institution">{entry.institution}</p>
+                  {entry.detail && <p class="history-detail">{entry.detail}</p>}
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))
+    }
+  </div>
+</Layout>
+
+<style>
+  .profile-page {
+    max-width: 920px;
+    padding: 40px 0 64px;
+  }
+  .profile-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 0.875rem;
+    margin-bottom: 32px;
+  }
+  .profile-back:hover {
+    color: var(--blue);
+  }
+  .profile-header {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    align-items: start;
+    gap: 36px;
+    padding-bottom: 36px;
+  }
+  .profile-photo {
+    display: block;
+    width: 180px;
+    height: auto;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    object-position: center top;
+    background: var(--surface);
+  }
+  .profile-header h1 {
+    font-size: clamp(2.25rem, 4vw, 3rem);
+    margin: 10px 0 12px;
+    overflow-wrap: anywhere;
+  }
+  .profile-role {
+    color: var(--text);
+    font-size: 0.95rem;
+  }
+  .profile-links {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 16px;
+  }
+  .profile-links .text-link {
+    font-size: 0.875rem;
+  }
+  .profile-section {
+    border-top: 1px solid var(--line);
+    padding: 30px 0;
+  }
+  .profile-section:last-child {
+    padding-bottom: 0;
+  }
+  .profile-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 24px;
+  }
+  .interests-section h2 {
+    margin-bottom: 12px;
+  }
+  .interests-section > p {
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .profile-history {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .profile-history li {
+    display: grid;
+    grid-template-columns: 185px minmax(0, 1fr);
+    gap: 28px;
+  }
+  .profile-history li + li {
+    margin-top: 26px;
+  }
+  .history-period {
+    color: var(--blue);
+    font-size: 0.875rem;
+    padding-top: 2px;
+  }
+  .profile-history h3 {
+    font-size: 1.05rem;
+  }
+  .history-institution {
+    color: var(--text);
+    font-size: 0.9rem;
+    margin-top: 6px;
+  }
+  .history-detail {
+    color: var(--muted);
+    font-size: 0.875rem;
+    margin-top: 4px;
+  }
+  @media (max-width: 680px) {
+    .profile-page {
+      padding: 28px 0 48px;
+    }
+    .profile-header {
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 24px;
+    }
+    .profile-photo {
+      width: 120px;
+    }
+    .profile-history li {
+      grid-template-columns: 1fr;
+      gap: 7px;
+    }
+  }
+  @media (max-width: 480px) {
+    .profile-header {
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+  }
+</style>
