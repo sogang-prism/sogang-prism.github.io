@@ -22,6 +22,10 @@ People의 김주람 교수 이름과 사진은 내부 상세 페이지 `/people/
 
 상세 페이지 구조는 [FELAB 이용재 교수 프로필](https://felab-unist.github.io/#members/yongjae-lee)의 상단 프로필과 Education / Experience 구분을 참고했습니다. 타 교수의 이력과 내용은 사용하지 않았습니다.
 
+## 재학생
+
+2026-09-10 사용자가 석사 재학생 YONGWOO LEE(INZENT Co.,Ltd.)와 SEJIN YANG(DSsolar)을 직접 제공했습니다. 두 학생의 입학 연도는 2025년이며, M.S. Students에 Admission Year · Name · Affiliation 순서로 표시합니다. 이름과 회사명은 제공된 표기를 유지합니다.
+
 ## 졸업생
 
 2026-09-10 사용자가 졸업생 9명의 영문 이름과 프로젝트 제목을 직접 제공했습니다. Walmyung Byun, Sangsu Chun, HyeongSeok Lee, Seunghyun Hwang, Inho Park, Jecheol Yeon, Youngil Song, Miseo Choi, HanLam Choi 순서로 표시합니다. 이름과 프로젝트 제목은 제공된 철자와 대소문자를 유지합니다. 사용자가 전원의 졸업 연도를 2026년으로, 프로그램을 MOT Master's Program으로 지정했습니다. Alumni 표의 열은 Graduation Year · Name · Program · Project / Thesis이며, 현재 소속은 표시하지 않습니다.

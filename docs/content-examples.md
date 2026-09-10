@@ -48,6 +48,8 @@ export const projects: Project[] = [
   id: 'student-id',
   name: '실제 영문 이름',
   group: 'phd-students', // 석사과정은 'ms-students'
+  admissionYear: '실제 입학 연도',
+  organization: '실제 회사 또는 기관명',
   // nativeName: '실제 한글 이름',
   // role: '실제 학적 또는 직위',
   // bio: '짧은 소개',
@@ -76,7 +78,7 @@ export const alumni: Alumnus[] = [
 ];
 ```
 
-`course`, `year`, `project`에 빈 문자열을 넣으면 대시로 표시합니다. `year`에는 졸업 연도를 입력하세요. 아직 명단이 없으면 `alumni: Alumnus[] = []`를 유지하세요. 재학생 명단은 아직 입력하지 않았으며, 졸업생은 사용자가 제공한 2026년 졸업생 9명을 반영했습니다. 프로그램은 모두 MOT Master's Program입니다. 위 예시 인물은 홈페이지에 표시하지 않습니다.
+`course`, `year`, `project`에 빈 문자열을 넣으면 대시로 표시합니다. `year`에는 졸업 연도를 입력하세요. 아직 명단이 없으면 `alumni: Alumnus[] = []`를 유지하세요. 석사 재학생은 사용자가 제공한 2025년 입학생 YONGWOO LEE(INZENT Co.,Ltd.)와 SEJIN YANG(DSsolar)을 Admission Year · Name · Affiliation 표에 표시하며, 졸업생은 사용자가 제공한 2026년 졸업생 9명을 반영했습니다. 프로그램은 모두 MOT Master's Program입니다. 위 예시 인물은 홈페이지에 표시하지 않습니다.
 
 ## 논문
 
