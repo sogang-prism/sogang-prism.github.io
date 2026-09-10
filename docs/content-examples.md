@@ -62,7 +62,7 @@ export const projects: Project[] = [
 
 ## 졸업생
 
-졸업생은 `members` 대신 `alumni` 배열에서 관리합니다. 사진이나 긴 소개 없이 아래 네 항목만 표시합니다.
+졸업생은 `members` 대신 `alumni` 배열에서 관리합니다. 표의 열은 Graduation Year · Name · Program · Project 순서입니다. Program은 데이터의 course 값에서 표시합니다.
 
 ```ts
 export const alumni: Alumnus[] = [
@@ -76,7 +76,7 @@ export const alumni: Alumnus[] = [
 ];
 ```
 
-`course`, `year`, `project`에 빈 문자열을 넣으면 대시로 표시합니다. `year`에는 졸업 연도를 입력하세요. 아직 명단이 없으면 `alumni: Alumnus[] = []`를 유지하세요. 학생과 졸업생의 실제 명단은 아직 입력하지 않았으며, 예시 인물은 홈페이지에 표시하지 않습니다.
+`course`, `year`, `project`에 빈 문자열을 넣으면 대시로 표시합니다. `year`에는 졸업 연도를 입력하세요. 아직 명단이 없으면 `alumni: Alumnus[] = []`를 유지하세요. 재학생 명단은 아직 입력하지 않았으며, 졸업생은 사용자가 제공한 2026년 졸업생 9명을 반영했습니다. 프로그램은 모두 MOT Master's Program입니다. 위 예시 인물은 홈페이지에 표시하지 않습니다.
 
 ## 논문
 
