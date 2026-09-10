@@ -1,0 +1,48 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeading from '../components/PageHeading.astro';
+import PersonCard from '../components/PersonCard.astro';
+import AlumniList from '../components/AlumniList.astro';
+import { members, alumni } from '../data/lab';
+const groups = [
+  { id: 'professor', title: 'Professor' },
+  { id: 'phd-students', title: 'Ph.D. Students' },
+  { id: 'ms-students', title: 'M.S. Students' },
+];
+---
+
+<Layout title="People" active="people">
+  <PageHeading number="02" title="People" showDot={false} />
+  <div class="page-content people-content">
+    {
+      groups.map((group) => {
+        const people = members.filter((member) => member.group === group.id);
+        return (
+          <section class="person-group" aria-labelledby={group.id}>
+            <h2 class="group-heading" id={group.id}>
+              {group.title}
+            </h2>
+            {people.length > 0 ? (
+              <div
+                class:list={[
+                  'person-grid',
+                  { 'professor-grid': group.id === 'professor' },
+                ]}
+              >
+                {people.map((member) => (
+                  <PersonCard member={member} />
+                ))}
+              </div>
+            ) : (
+              <p class="people-empty">Profiles will be added soon.</p>
+            )}
+          </section>
+        );
+      })
+    }
+    <section class="person-group" aria-labelledby="alumni">
+      <h2 class="group-heading" id="alumni">Alumni</h2>
+      <AlumniList alumni={alumni} />
+    </section>
+  </div>
+</Layout>

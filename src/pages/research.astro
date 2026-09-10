@@ -1,0 +1,127 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeading from '../components/PageHeading.astro';
+import EmptyState from '../components/EmptyState.astro';
+import Arrow from '../components/Arrow.astro';
+import { lab, research, publications } from '../data/lab';
+import { sitePath } from '../lib/links';
+---
+
+<Layout title="Research" active="research">
+  <PageHeading
+    number="01"
+    title="Research"
+    showDot={false}
+    description="Developing analytical methods for informed decision-making."
+  />
+  <div class="page-content">
+    {
+      research.length > 0 ? (
+        research.map((theme, index) => {
+          const related = publications
+            .filter((paper) => theme.publicationIds.includes(paper.id))
+            .slice(0, 2);
+          return (
+            <section class="theme-detail" id={theme.id}>
+              <span class="theme-number">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <div>
+                <div
+                  class:list={[
+                    'theme-overview',
+                    { 'has-illustration': theme.illustration },
+                  ]}
+                >
+                  <div>
+                    <h2>{theme.title}</h2>
+                    <p class="theme-description">
+                      {theme.description || theme.summary}
+                    </p>
+                    {theme.keywords.length > 0 && (
+                      <ul class="keyword-list" aria-label="Research keywords">
+                        {theme.keywords.map((word) => (
+                          <li>{word}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                  {theme.illustration && (
+                    <img
+                      class="theme-illustration"
+                      src={sitePath(theme.illustration.src)}
+                      alt={theme.illustration.alt}
+                      width="240"
+                      height="160"
+                      loading={index === 0 ? 'eager' : 'lazy'}
+                      decoding="async"
+                    />
+                  )}
+                </div>
+                {related.length > 0 && (
+                  <div class="related-papers">
+                    <p>Related publications</p>
+                    {related.map((paper) => (
+                      <a href={sitePath(`publications/#${paper.id}`)}>
+                        {paper.title} <Arrow />
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </section>
+          );
+        })
+      ) : lab.draft ? (
+        [1, 2, 3].map((number) => (
+          <section class="theme-detail">
+            <span class="theme-number">{String(number).padStart(2, '0')}</span>
+            <div>
+              <>
+                <h2>Research theme {String(number).padStart(2, '0')}</h2>
+                <p class="theme-description">
+                  A description of this research theme, its central questions,
+                  and its approach will appear here.
+                </p>
+                <span class="placeholder-label" style="margin-top:18px">
+                  Research content placeholder
+                </span>
+              </>
+            </div>
+          </section>
+        ))
+      ) : (
+        <EmptyState
+          title="Research themes coming soon"
+          description="Information about our research will be shared here."
+        />
+      )
+    }
+  </div>
+</Layout>
+
+<style>
+  .theme-overview.has-illustration {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    align-items: center;
+    gap: 32px;
+  }
+  .theme-illustration {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+  }
+  @media (max-width: 760px) {
+    .theme-overview.has-illustration {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 20px;
+    }
+    .theme-illustration {
+      width: min(220px, 100%);
+      justify-self: center;
+    }
+  }
+</style>

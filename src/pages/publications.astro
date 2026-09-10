@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeading from '../components/PageHeading.astro';
+import PublicationItem from '../components/PublicationItem.astro';
+import EmptyState from '../components/EmptyState.astro';
+import { lab, publications } from '../data/lab';
+const years = [...new Set(publications.map((paper) => paper.year))].sort(
+  (a, b) => b - a,
+);
+---
+
+<Layout title="Publications" active="publications">
+  <PageHeading number="03" title="Publications" showDot={false} />
+  <div class="page-content publications-content">
+    <p class="publication-context">
+      <a href={lab.scholar}>Google Scholar ↗</a>
+    </p>
+    {
+      years.length > 0 ? (
+        years.map((year) => (
+          <section class="year-section" aria-labelledby={`year-${year}`}>
+            <>
+              <h2 id={`year-${year}`}>{year}</h2>
+              <div class="publication-list">
+                {publications
+                  .filter((paper) => paper.year === year)
+                  .map((paper) => (
+                    <PublicationItem paper={paper} />
+                  ))}
+              </div>
+            </>
+          </section>
+        ))
+      ) : lab.draft ? (
+        <section class="year-section">
+          <>
+            <h2>Year</h2>
+            <div class="publication-list">
+              {[1, 2, 3].map((number) => (
+                <article class="publication placeholder-publication">
+                  <div class="publication-body">
+                    <span class="placeholder-label">
+                      Publication placeholder {String(number).padStart(2, '0')}
+                    </span>
+                    <h3>Title of a publication</h3>
+                    <p class="publication-authors">Author names</p>
+                    <p class="publication-venue">
+                      Journal or conference · Volume, pages, year
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </>
+        </section>
+      ) : (
+        <EmptyState
+          title="Publications coming soon"
+          description="Our publication list will be shared here."
+        />
+      )
+    }
+  </div>
+</Layout>
+<style>
+  .publications-content {
+    max-width: 960px;
+    margin-inline: auto;
+  }
+  .publication-context {
+    padding-bottom: 20px;
+  }
+  .year-section {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 24px;
+    padding-block: 24px;
+  }
+  .year-section:first-of-type {
+    padding-top: 0;
+  }
+  .year-section > h2 {
+    font-size: 1.25rem;
+    line-height: 1.45;
+  }
+  .publication-list :global(.publication) {
+    padding-block: 16px;
+  }
+  .publication-list :global(.publication:first-child) {
+    padding-top: 0;
+  }
+  .publication-list :global(.publication:last-child) {
+    padding-bottom: 0;
+  }
+  .publication-list :global(.publication-body h3) {
+    font-size: 1.0625rem;
+    line-height: 1.45;
+  }
+  .publication-list :global(.publication-authors) {
+    margin-top: 5px;
+    line-height: 1.5;
+  }
+  .publication-list :global(.publication-venue) {
+    margin-top: 2px;
+    line-height: 1.5;
+  }
+  .publication-list :global(.publication-links) {
+    margin-top: 8px;
+    gap: 16px;
+  }
+  @media (max-width: 680px) {
+    .year-section {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+  }
+</style>
