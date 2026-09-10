@@ -69,14 +69,14 @@ export const alumni: Alumnus[] = [
   {
     id: 'alumnus-id',
     name: '실제 이름',
-    course: 'M.S. (실제 졸업 연도)',
+    course: 'M.S.',
+    year: '실제 졸업 연도',
     project: '실제 프로젝트 또는 학위논문 제목',
-    current: '확인된 현재 소속 또는 직위',
   },
 ];
 ```
 
-`course`, `project`, `current`에 빈 문자열을 넣으면 대시로 표시합니다. 아직 명단이 없으면 `alumni: Alumnus[] = []`를 유지하세요. 학생과 졸업생의 실제 명단은 아직 입력하지 않았으며, 예시 인물은 홈페이지에 표시하지 않습니다.
+`course`, `year`, `project`에 빈 문자열을 넣으면 대시로 표시합니다. `year`에는 졸업 연도를 입력하세요. 아직 명단이 없으면 `alumni: Alumnus[] = []`를 유지하세요. 학생과 졸업생의 실제 명단은 아직 입력하지 않았으며, 예시 인물은 홈페이지에 표시하지 않습니다.
 
 ## 논문
 
