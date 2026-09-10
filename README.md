@@ -55,7 +55,7 @@ npm run preview
 
 `draft`는 표시와 검색 인덱싱 설정이며 접근 제한 기능이 아닙니다.
 
-논문은 최신 연도순으로 표시되며 최근 3편이 홈에 자동 표시됩니다. 별도 대표 논문 선택은 필요하지 않습니다. 소식 기능은 없습니다. Projects는 Research Projects와 Education & Training Programs로 구분합니다. 연구과제는 `projects`, 인력양성사업은 `educationPrograms` 배열의 입력 순서로 표시합니다. 인력양성사업에는 2025–2030년 KIAT 지원 사업을 반영했습니다. People은 Professor, Ph.D. Students, M.S. Students, Alumni 순서입니다. 명단이 비어 있어도 각 섹션은 유지하며 짧은 준비 안내를 표시합니다. 교수 카드는 이름과 사진을 누르면 상세 프로필로 이동합니다. 상세 페이지의 Education과 Experience는 `juramProfile`에서 관리합니다. 교수와 재학생은 프로필 카드, 졸업생은 Graduation Year · Name · Program · Project / Thesis 네 열의 간단한 표로 표시됩니다. 사용자가 제공한 2026년 졸업생 9명을 반영했으며, 프로그램은 모두 MOT Master's Program입니다.
+논문은 최신 연도순으로 표시되며 최근 3편이 홈에 자동 표시됩니다. 별도 대표 논문 선택은 필요하지 않습니다. 소식 기능은 없습니다. Projects는 Research Projects와 Education & Training Programs로 구분합니다. 연구과제는 `projects`, 인력양성사업은 `educationPrograms` 배열의 입력 순서로 표시합니다. 인력양성사업에는 2025–2030년 KIAT 지원 사업을 반영했습니다. People은 Professor, Ph.D. Students, M.S. Students, Alumni 순서입니다. 명단이 비어 있어도 각 섹션은 유지하며 짧은 준비 안내를 표시합니다. 교수 카드는 이름과 사진을 누르면 상세 프로필로 이동합니다. 상세 페이지의 Education과 Experience는 `juramProfile`에서 관리합니다. 교수는 프로필 카드, 재학생은 Admission Year · Name · Affiliation 세 열의 표, 졸업생은 Graduation Year · Name · Program · Project / Thesis 네 열의 간단한 표로 표시됩니다. 사용자가 제공한 2026년 졸업생 9명을 반영했으며, 프로그램은 모두 MOT Master's Program입니다.
 
 연구 주제와 논문의 `id`는 영문 소문자와 하이픈으로 구성된 고유 값으로 지정하세요. `publicationIds`에 논문 ID를 넣으면 연구 페이지에 앞의 두 편이 대표 논문으로 표시됩니다. 개인 사진이 없으면 이름의 머리글자를 표시합니다. 이메일과 외부 링크는 값이 있을 때만 표시됩니다.
 
