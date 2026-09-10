@@ -13,6 +13,7 @@ const { students, labelledBy } = Astro.props;
       <tr>
         <th scope="col">Admission Year</th>
         <th scope="col">Name</th>
+        <th scope="col">Program</th>
         <th scope="col">Affiliation</th>
       </tr>
     </thead>
@@ -21,6 +22,15 @@ const { students, labelledBy } = Astro.props;
         <tr id={student.id}>
           <td>{student.admissionYear || '—'}</td>
           <th scope="row">{student.name}</th>
+          <td>
+            {student.program ? (
+              <span class="student-program-tag">
+                {student.program === "MOT Master's Program" ? (
+                  <><span>MOT</span>{' '}<span>Master's Program</span></>
+                ) : student.program}
+              </span>
+            ) : '—'}
+          </td>
           <td>{student.organization || '—'}</td>
         </tr>
       ))}
@@ -34,7 +44,7 @@ const { students, labelledBy } = Astro.props;
   }
   .student-table {
     width: 100%;
-    min-width: 360px;
+    min-width: 480px;
     border-collapse: collapse;
     table-layout: fixed;
     font-size: 0.8125rem;
@@ -60,6 +70,25 @@ const { students, labelledBy } = Astro.props;
   }
   thead th:nth-child(2) {
     width: 144px;
+  }
+  thead th:nth-child(3) {
+    width: 132px;
+  }
+  .student-program-tag {
+    display: inline-block;
+    max-width: 100%;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: #e9f0fa;
+    color: #365b8c;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    line-height: 1.45;
+    vertical-align: top;
+  }
+  .student-program-tag > span {
+    display: block;
+    white-space: nowrap;
   }
   tbody th {
     font-weight: 500;
