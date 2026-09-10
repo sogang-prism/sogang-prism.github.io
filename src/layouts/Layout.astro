@@ -1,0 +1,151 @@
+---
+import '@fontsource-variable/inter';
+import '../styles/global.css';
+import { lab } from '../data/lab';
+import { sitePath } from '../lib/links';
+import Brand from '../components/Brand.astro';
+import Arrow from '../components/Arrow.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  active?: string;
+  noindex?: boolean;
+}
+const {
+  title,
+  description = lab.description,
+  active = 'home',
+  noindex = false,
+} = Astro.props;
+const pageTitle = title ? `${title} | ${lab.name}` : lab.name;
+const canonical =
+  Astro.site && !noindex ? new URL(Astro.url.pathname, Astro.site) : undefined;
+const nav = [
+  { key: 'research', label: 'Research' },
+  { key: 'people', label: 'People' },
+  { key: 'publications', label: 'Publications' },
+  { key: 'projects', label: 'Projects' },
+  { key: 'contact', label: 'Contact' },
+];
+---
+
+<!doctype html>
+<html lang={lab.language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#152940" />
+    <meta name="generator" content={Astro.generator} />
+    {
+      (lab.draft || noindex) && (
+        <meta name="robots" content="noindex, nofollow" />
+      )
+    }
+    {canonical && <link rel="canonical" href={canonical} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={lab.name} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href={sitePath('favicon.svg?v=20260910-soft-blue-prism')}
+    />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="brand-link"
+          href={sitePath()}
+          aria-label={lab.name + ' home'}
+          aria-current={active === 'home' ? 'page' : undefined}><Brand /></a
+        >
+        <nav class="site-nav" aria-label="Main navigation">
+          {
+            nav.map((item) => (
+              <a
+                class:list={{ active: active === item.key }}
+                href={sitePath(`${item.key}/`)}
+                aria-current={active === item.key ? 'page' : undefined}
+              >
+                {item.label}
+                {item.key === 'contact' && <Arrow external />}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+    </header>
+    {
+      lab.draft && (
+        <div class="draft-notice">
+          <div class="container">
+            <>
+              <span class="draft-indicator" aria-hidden="true" />
+              <strong>Preview edition</strong>
+              <span>
+                Lab details are pending. Placeholder content is marked below.
+              </span>
+            </>
+          </div>
+        </div>
+      )
+    }
+    <main id="main-content" class="container" tabindex="-1"><slot /></main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div>
+            <a
+              class="brand-link"
+              href={sitePath()}
+              aria-label={lab.name + ' home'}><Brand compact /></a
+            >{
+              lab.affiliation && (
+                <p class="footer-affiliation">
+                  {lab.affiliation}
+                  {lab.department && (
+                    <>
+                      <br />
+                      {lab.department}
+                    </>
+                  )}
+                </p>
+              )
+            }
+          </div>
+          <div class="footer-links">
+            <a href={sitePath('contact/')}>Get in touch <Arrow /></a>{
+              lab.facultyProfile && (
+                <a href={lab.facultyProfile}>
+                  Sogang profile <Arrow external />
+                </a>
+              )
+            }{
+              lab.github && (
+                <a href={lab.github}>
+                  GitHub <Arrow external />
+                </a>
+              )
+            }{
+              lab.scholar && (
+                <a href={lab.scholar}>
+                  Google Scholar <Arrow external />
+                </a>
+              )
+            }
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© {new Date().getFullYear()} {lab.name}</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
