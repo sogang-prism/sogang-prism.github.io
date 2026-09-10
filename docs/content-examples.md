@@ -62,7 +62,7 @@ export const projects: Project[] = [
 
 ## 졸업생
 
-졸업생은 `members` 대신 `alumni` 배열에서 관리합니다. 표의 열은 Graduation Year · Name · Program · Project 순서입니다. Program은 데이터의 course 값에서 표시합니다.
+졸업생은 `members` 대신 `alumni` 배열에서 관리합니다. 표의 열은 Graduation Year · Name · Program · Project / Thesis 순서입니다. Program은 데이터의 course 값에서 표시합니다.
 
 ```ts
 export const alumni: Alumnus[] = [
