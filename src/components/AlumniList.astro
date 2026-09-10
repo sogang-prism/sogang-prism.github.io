@@ -10,9 +10,9 @@ const { alumni } = Astro.props;
   <table class="alumni-table" aria-labelledby="alumni">
     <thead>
       <tr>
+        <th scope="col">Year</th>
         <th scope="col">Name</th>
         <th scope="col">Course</th>
-        <th scope="col">Year</th>
         <th scope="col">Project</th>
       </tr>
     </thead>
@@ -21,9 +21,9 @@ const { alumni } = Astro.props;
         alumni.length > 0 ? (
           alumni.map((person) => (
             <tr id={person.id}>
+              <td>{person.year || '—'}</td>
               <th scope="row">{person.name}</th>
               <td>{person.course || '—'}</td>
-              <td>{person.year || '—'}</td>
               <td>{person.project || '—'}</td>
             </tr>
           ))
