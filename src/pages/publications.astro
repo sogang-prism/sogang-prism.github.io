@@ -10,11 +10,12 @@ const years = [...new Set(publications.map((paper) => paper.year))].sort(
 ---
 
 <Layout title="Publications" active="publications">
-  <PageHeading number="03" title="Publications" showDot={false} />
-  <div class="page-content publications-content">
+  <PageHeading number="03" title="Publications" showDot={false}>
     <p class="publication-context">
       <a href={lab.scholar}>Google Scholar ↗</a>
     </p>
+  </PageHeading>
+  <div class="page-content publications-content">
     {
       years.length > 0 ? (
         years.map((year) => (
@@ -68,7 +69,8 @@ const years = [...new Set(publications.map((paper) => paper.year))].sort(
     margin-inline: auto;
   }
   .publication-context {
-    padding-bottom: 20px;
+    margin: 24px 0 0;
+    padding: 0;
   }
   .year-section {
     grid-template-columns: 72px minmax(0, 1fr);
