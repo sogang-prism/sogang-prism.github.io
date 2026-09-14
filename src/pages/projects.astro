@@ -28,6 +28,7 @@ const groups = [
                   <p class="project-period">{project.period}</p>
                   <div>
                     <h3>{project.title}</h3>
+                    {project.titleKorean && <p class="project-title-korean" lang="ko">{project.titleKorean}</p>}
                     {(project.funder || project.note) && (
                       <p class="project-meta">
                         {project.funder}
@@ -60,21 +61,21 @@ const groups = [
 
 <style>
   .project-group + .project-group {
-    margin-top: 48px;
+    margin-top: 36px;
   }
   .project-group > h2 {
     font-size: 1.25rem;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
   }
   .projects-empty {
     color: var(--muted);
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
   }
   .project {
     display: grid;
-    grid-template-columns: 185px minmax(0, 1fr);
-    gap: 36px;
-    padding: 32px 0;
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 24px;
+    padding: 22px 0;
     border-bottom: 1px solid var(--line);
   }
   .project:first-child {
@@ -83,17 +84,28 @@ const groups = [
   .project-period {
     color: var(--blue);
     font-size: 0.875rem;
-    padding-top: 5px;
+    padding-top: 2px;
   }
   .project h3 {
-    font-size: 1.125rem;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+  }
+  .project-title-korean {
+    color: #6b7787;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.55;
+    margin-top: 4px;
+    word-break: keep-all;
     overflow-wrap: anywhere;
   }
   .project-meta {
     color: var(--muted);
     font-size: 0.875rem;
     line-height: 1.8;
-    margin-top: 12px;
+    margin-top: 6px;
   }
   .project-description {
     color: var(--muted);
