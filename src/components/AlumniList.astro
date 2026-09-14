@@ -34,7 +34,7 @@ const { alumni } = Astro.props;
                   '—'
                 )}
               </td>
-              <td>{person.project || '—'}{person.projectKorean && <small class="alumni-project-korean">{person.projectKorean}</small>}</td>
+              <td class="alumni-project"><span class="alumni-project-english">{person.project || '—'}</span>{person.projectKorean && <small class="alumni-project-korean" lang="ko">{person.projectKorean}</small>}</td>
             </tr>
           ))
         ) : (
@@ -50,5 +50,6 @@ const { alumni } = Astro.props;
 </div>
 
 <style>
-  .alumni-project-korean { display: block; margin-top: 4px; font-size: 0.75rem; line-height: 1.5; }
+  .alumni-project-english { color: #263b53; font-size: 0.78125rem; line-height: 1.5; }
+  .alumni-project-korean { display: block; margin-top: 3px; color: #6b7787; font-size: 0.6875rem; font-weight: 400; line-height: 1.5; word-break: keep-all; }
 </style>
