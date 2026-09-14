@@ -9,6 +9,7 @@ export interface ResearchTheme {
 }
 
 export interface Project {
+  titleKorean?: string;
   id: string;
   title: string;
   period: string;
@@ -166,6 +167,7 @@ export const research: ResearchTheme[] = [
 export const projects: Project[] = [
   {
     id: 'domain-normative-alignment-llms',
+    titleKorean: "대규모 언어모델의 도메인 규범 정렬: 기술가치평가의 구조적 불일치 진단 및 인과 제약 기반 교정",
     title:
       'Domain-Normative Alignment of Large Language Models: Diagnosing Structural Misalignment and Causal Constraint-Based Correction in Technology Valuation',
     period: 'Sep 2026 – Aug 2029',
@@ -174,26 +176,30 @@ export const projects: Project[] = [
   },
   {
     id: 'climate-technology-knowledge-exchange',
+    titleKorean: "기후기술 생태계의 지식교류와 혁신: 특허 및 계량서지 데이터를 활용한 실증연구",
     title:
       'Knowledge Exchange and Innovation in Climate Technology Ecosystems: An Empirical Study Using Patent and Bibliometric Data',
     period: 'Jun 2025 – May 2028',
     funder: 'National Research Foundation of Korea (NRF)',
-    note: 'Collaborative research',
+    note: 'Collaborative Research',
   },
   {
     id: 'data-valuation-framework',
+    titleKorean: "데이터 가치평가 프레임워크 개발",
     title: 'Developing a Data Valuation Framework',
     period: '2023 – 2024',
     funder: 'Korea Institute of Science and Technology Information (KISTI)',
   },
   {
     id: 'data-valuation-guidelines',
+    titleKorean: "데이터 가치평가 가이드라인 개발",
     title: 'Developing Data Valuation Guidelines',
     period: '2023',
     funder: 'Korea Data Agency (K-DATA)',
   },
   {
     id: 'purpose-specific-ip-valuation-models',
+    titleKorean: "지식재산 가치평가를 위한 목적별 모델 개발",
     title:
       'Developing Purpose-Specific Models for Intellectual Property Valuation',
     period: '2023',
@@ -201,6 +207,7 @@ export const projects: Project[] = [
   },
   {
     id: 'explainable-ai-patent-renewal',
+    titleKorean: "특허 유지 의사결정을 위한 설명가능 AI 기반 의사결정지원모델 개발",
     title:
       'Developing an Explainable AI-Based Decision Support Model for Patent Renewal',
     period: '2023',
@@ -209,6 +216,7 @@ export const projects: Project[] = [
   },
   {
     id: 'translational-research-technology-seeds',
+    titleKorean: "중개연구를 위한 기술시드 발굴 시스템 개발",
     title:
       'Developing a System for Identifying Technology Seeds for Translational Research',
     period: '2021 – 2023',
@@ -216,6 +224,7 @@ export const projects: Project[] = [
   },
   {
     id: 'explainable-ai-technology-valuation',
+    titleKorean: "유망기술 가치평가 및 핵심요인 도출을 위한 설명가능 AI 기반 방법론 개발",
     title:
       'Developing an Explainable AI-Based Methodology for Valuing Promising Technologies and Identifying Key Factors',
     period: 'May 2021 – Apr 2023',
@@ -224,6 +233,7 @@ export const projects: Project[] = [
   },
   {
     id: 'emerging-technology-decision-support',
+    titleKorean: "신흥기술 가치평가를 위한 설명가능 AI 기반 의사결정지원시스템 개발",
     title:
       'Developing an Explainable AI-Based Decision Support System for Valuing Emerging Technologies',
     period: 'Jun 2021 – Nov 2021',
@@ -232,6 +242,7 @@ export const projects: Project[] = [
   },
   {
     id: 'customer-centric-service-decision-support',
+    titleKorean: "고객 중심의 서비스 운영 및 개선을 위한 데이터 기반 의사결정지원시스템 개발",
     title:
       'Developing a Data-Driven Decision Support System for Customer-Centric Service Operations and Improvement',
     period: 'Sep 2019 – Aug 2020',
@@ -243,6 +254,7 @@ export const projects: Project[] = [
 export const educationPrograms: Project[] = [
   {
     id: 'global-strategic-industries-technology-management',
+    titleKorean: "첨단전략산업 글로벌 기술경영 전문인력 양성사업",
     title:
       'Global Talent Development Program in Technology Management for Advanced Strategic Industries',
     period: '2025 – 2030',
