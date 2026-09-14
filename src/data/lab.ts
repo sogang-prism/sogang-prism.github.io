@@ -233,7 +233,7 @@ export const projects: Project[] = [
   },
   {
     id: 'emerging-technology-decision-support',
-    titleKorean: "신흥기술 가치평가를 위한 설명가능 AI 기반 의사결정지원시스템 개발",
+    titleKorean: "유망기술 가치평가를 위한 설명가능 AI 기반 의사결정지원시스템 개발",
     title:
       'Developing an Explainable AI-Based Decision Support System for Valuing Emerging Technologies',
     period: 'Jun 2021 – Nov 2021',
