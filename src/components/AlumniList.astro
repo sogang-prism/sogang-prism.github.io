@@ -13,7 +13,7 @@ const { alumni } = Astro.props;
         <th scope="col">Graduation Year</th>
         <th scope="col">Name</th>
         <th scope="col">Program</th>
-        <th scope="col">Project / Thesis</th>
+        <th scope="col">Project / Thesis Title</th>
       </tr>
     </thead>
     <tbody>
@@ -34,7 +34,7 @@ const { alumni } = Astro.props;
                   '—'
                 )}
               </td>
-              <td>{person.project || '—'}</td>
+              <td>{person.project || '—'}{person.projectKorean && <small class="alumni-project-korean">{person.projectKorean}</small>}</td>
             </tr>
           ))
         ) : (
@@ -48,3 +48,7 @@ const { alumni } = Astro.props;
     </tbody>
   </table>
 </div>
+
+<style>
+  .alumni-project-korean { display: block; margin-top: 4px; font-size: 0.75rem; line-height: 1.5; }
+</style>
