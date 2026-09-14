@@ -44,6 +44,7 @@ export interface Alumnus {
   course: string;
   year: string;
   project: string;
+  projectKorean?: string;
 }
 
 export interface Publication {
@@ -368,95 +369,124 @@ export const juramProfile: {
 // Alumni records supplied by the professor. See docs/content-examples.md.
 export const alumni: Alumnus[] = [
   {
+    "id": "gi-beom-ko",
+    "name": "Gi-beom Ko",
+    "course": "MOT Master's Program",
+    "year": "2026",
+    "project": "New-Hire Training and Early Job Performance in Telecommunications Sales: Implications for Training Design",
+    "projectKorean": "통신 세일즈 신입사원 교육과 초기업무 성과 분석을 통한 교육방식 설계"
+  },
+  {
     "id": "walmyung-byun",
     "name": "Walmyung Byun",
-    "project": "An Empirical Game-Theoretic Analysis of Technology Credit Bureau (TCB) Strategy Selection and Bank Responses: Changes in Market Structure during Policy Introduction",
+    "course": "MOT Master's Program",
     "year": "2026",
-    "course": "MOT Master's Program"
+    "project": "Technology Credit Bureau Strategies and Bank Responses: An Empirical Game-Theoretic Analysis of Market Structure during Policy Rollout",
+    "projectKorean": "TCB 전략 선택과 은행 반응에 대한 게임이론 실증분석: 정책 도입기의 시장구조 변화"
   },
   {
     "id": "sangsu-chun",
     "name": "Sangsu Chun",
-    "project": "Quantifying Semantic and Structural Discrepancies between LLM-Generated and Authentic Customer Reviews",
+    "course": "MOT Master's Program",
     "year": "2026",
-    "course": "MOT Master's Program"
+    "project": "Semantic and Structural Divergence between LLM-Generated and Real-World Customer Reviews",
+    "projectKorean": "LLM이 생성한 고객 리뷰와 실제 고객 리뷰 간 의미적·구조적 불일치 정량화"
   },
   {
     "id": "hyeongseok-lee",
     "name": "HyeongSeok Lee",
-    "project": "Identifying Firm-Specific Core Technology Opportunities for Achieving Market Leadership in the Carbon Nanotube (CNT)-Based X-Ray Market",
+    "course": "MOT Master's Program",
     "year": "2026",
-    "course": "MOT Master's Program"
+    "project": "Firm-Specific Technology Opportunity Discovery for Market Leadership in CNT-Based X-Ray Technologies",
+    "projectKorean": "CNT 기반 X-ray 시장 주도권 확보를 위한 기업 특화형 핵심 기술기회 탐색"
   },
   {
     "id": "seunghyun-hwang",
     "name": "Seunghyun Hwang",
-    "project": "A Framework for Recommending Candidate Technology Transferees Based on Technological Similarity and Complementarity",
+    "course": "MOT Master's Program",
     "year": "2026",
-    "course": "MOT Master's Program"
-  },
-  {
-    "id": "inho-park",
-    "name": "Inho Park",
-    "project": "Risk Factor Analysis of the Last-Mile Delivery Process Using FMEA",
-    "year": "2026",
-    "course": "MOT Master's Program"
-  },
-  {
-    "id": "jecheol-yeon",
-    "name": "Jecheol Yeon",
-    "project": "Performance and Reliability Validation of an LLM-Based Technology Valuation Model Using a Multi-Agent Critique Loop",
-    "year": "2026",
-    "course": "MOT Master's Program"
-  },
-  {
-    "id": "youngil-song",
-    "name": "Youngil Song",
-    "project": "Development of a Region-Specific R&D Evaluation Model: An AHP-Based Expert Assessment Approach",
-    "year": "2026",
-    "course": "MOT Master's Program"
+    "project": "A Technology Transfer Partner Recommendation Framework Based on Technological Similarity and Complementarity",
+    "projectKorean": "기술 유사도와 상보성 분석을 통한 기술이전 후보기업 추천 프레임워크 개발"
   },
   {
     "id": "miseo-choi",
-    "name": "Mi-seo choe",
-    "project": "The Impact of the AI Voucher Program on Firms’ Economic Performance",
+    "name": "Mi-seo Choi",
+    "course": "MOT Master's Program",
     "year": "2026",
-    "course": "MOT Master's Program"
-  },
-  {
-    "id": "hanlam-choi",
-    "name": "HanLam Choi",
-    "project": "Assessing the Adequacy of Corporate Cybersecurity Investment and Developing Future Strategies through an Analysis of National Cybersecurity R&D Trends",
-    "year": "2026",
-    "course": "MOT Master's Program"
+    "project": "The AI Voucher Program and Firm Economic Performance",
+    "projectKorean": "AI 바우처 지원사업이 기업의 경제적 성과에 미치는 영향 분석"
   },
   {
     "id": "jisuk-shin",
     "name": "Jisuk Shin",
-    "project": "Development of a Production Planning Optimization Model for Small and Medium-Sized Elevator Manufacturers",
+    "course": "MOT Master's Program",
     "year": "2026",
-    "course": "MOT Master's Program"
+    "project": "Production Planning Optimization for Small and Medium-Sized Elevator Manufacturers",
+    "projectKorean": "중소 승강기 제조업을 위한 생산계획 최적화 모델 개발"
   },
   {
     "id": "bora-sung",
     "name": "Bora Sung",
-    "project": "Structural Relationships among Barriers to Generative AI Adoption: Evidence from the Telecommunications Industry",
+    "course": "MOT Master's Program",
     "year": "2026",
-    "course": "MOT Master's Program"
-  },
-  {
-    "id": "gi-beom-ko",
-    "name": "Gi-beom Ko",
-    "project": "Identifying Effective Training Approaches for Newly Hired Telecommunications Sales Employees: An Analysis of Training and Early Job Performance",
-    "year": "2026",
-    "course": "MOT Master's Program"
+    "project": "Structural Relationships among Barriers to Generative AI Adoption in the Telecommunications Industry",
+    "projectKorean": "생성형 인공지능 도입 장애요인의 구조적 관계 분석: 통신산업을 중심으로"
   },
   {
     "id": "byung-deuk-park",
     "name": "Byung-deuk Park",
-    "project": "Relationships among Buyer Price-Reduction Pressure, External Collaboration Networks, Internal R&D Capabilities, and Technological Innovation Performance in SMEs and Venture Firms",
+    "course": "MOT Master's Program",
     "year": "2026",
-    "course": "MOT Master's Program"
+    "project": "Buyer Price-Reduction Pressure, Collaboration Networks, R&D Capabilities, and Innovation Performance in SMEs and Venture Firms",
+    "projectKorean": "구매자의 단가인하 압력, 외부 협력네트워크, 내부 R&D 역량과 중소·벤처기업의 기술혁신 성과 간 관계 분석"
+  },
+  {
+    "id": "inho-park",
+    "name": "Inho Park",
+    "course": "MOT Master's Program",
+    "year": "2026",
+    "project": "Risk Assessment of Last-Mile Delivery Using FMEA",
+    "projectKorean": "FMEA 기법을 활용한 라스트마일 배송구간의 위험요인 분석"
+  },
+  {
+    "id": "jecheol-yeon",
+    "name": "Jecheol Yeon",
+    "course": "MOT Master's Program",
+    "year": "2026",
+    "project": "Evaluating the Performance and Reliability of an LLM-Based Technology Valuation Model Using Multi-Agent Critique",
+    "projectKorean": "멀티에이전트 비판 루프를 적용한 LLM 기반 기술가치평가 모델의 성능 및 신뢰성 검증"
+  },
+  {
+    "id": "youngil-song",
+    "name": "Youngil Song",
+    "course": "MOT Master's Program",
+    "year": "2026",
+    "project": "A Region-Specific R&D Evaluation Model Based on AHP Expert Assessments",
+    "projectKorean": "지역특화형 R&D 평가모델 개발: AHP 기반 전문가 평가를 중심으로"
+  },
+  {
+    "id": "hanlam-choi",
+    "name": "HanLam Choi",
+    "course": "MOT Master's Program",
+    "year": "2026",
+    "project": "Corporate Cybersecurity Investment Adequacy and Future Strategy: Evidence from National R&D Trend Analysis",
+    "projectKorean": "국가 사이버보안 R&D 동향 분석을 통한 사내 보안투자 적정성 평가 및 향후 전략 수립"
+  },
+  {
+    "id": "jin-young-seo",
+    "name": "Jin-young Seo",
+    "course": "MOT Master's Program",
+    "year": "2026",
+    "project": "Development of a Data-Driven System for Designing Interdisciplinary and Self-Designed Majors through Alignment Analysis between Emerging Technologies and University Curricula",
+    "projectKorean": "유망기술과 대학 교육과정 간 정합성 분석을 통한 데이터 기반 융합·자율전공 설계 시스템 개발"
+  },
+  {
+    "id": "jeong-yeon-kim",
+    "name": "Jeong-yeon Kim",
+    "course": "MOT Master's Program",
+    "year": "2026",
+    "project": "Technology Outsourcing in AI Transformation and Subsequent Firm Performance: Evidence from Korean Firms",
+    "projectKorean": "AI 전환 과정에서의 기술 외부조달과 후속 기업성과: 한국 기업을 대상으로 한 실증분석"
   }
 ];
 
