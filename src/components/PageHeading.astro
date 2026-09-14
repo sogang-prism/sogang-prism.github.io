@@ -13,4 +13,5 @@ const { number, title, description, showDot = true } = Astro.props;
   <p class="eyebrow"><span>{number}</span> / {lab.name}</p>
   <h1>{title}{showDot && <span class="title-dot">.</span>}</h1>
   {description && <p class="page-description">{description}</p>}
+  <slot />
 </header>
