@@ -34,6 +34,23 @@ const nav = [
 <html lang={lab.language}>
   <head>
     <meta charset="UTF-8" />
+    <meta name="google-site-verification" content="ZVSZ_V5ScrzRYAKxbwGqVQ1SZbkflgY47wMbOu4yYeA" />
+    {import.meta.env.PROD && !lab.draft && (
+      <>
+        <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-YBSN87SETK"></script>
+        <script is:inline>
+          if (window.location.hostname === 'sogang-prism.github.io') {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YBSN87SETK', {
+              allow_google_signals: false,
+              allow_ad_personalization_signals: false
+            });
+          }
+        </script>
+      </>
+    )}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#152940" />
