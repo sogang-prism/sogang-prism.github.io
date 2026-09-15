@@ -105,7 +105,7 @@ export const research: ResearchTheme[] = [
     summary:
       'Understanding technological change through patent data, forecasting, and technology valuation.',
     description:
-      'We analyze patents and other knowledge sources to understand how technologies evolve, converge, and create value.',
+      'We use patents and other knowledge sources to support strategic technology decisions, including opportunity identification, evaluation, selection, and investment.',
     keywords: [
       'Technology valuation',
       'Patent analytics',
