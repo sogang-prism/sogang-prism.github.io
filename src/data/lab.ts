@@ -504,6 +504,14 @@ export const alumni: Alumnus[] = [
 
 export const publications: Publication[] = [
   {
+    id: 'cross-domain-alignment-2026',
+    title:
+      'Leveraging cross-domain knowledge alignment for AI transformation: A contrastive learning approach using problem-solution pairs from patents',
+    authors: 'J. Choi, J. Kim, C. Lee',
+    venue: 'Applied Soft Computing, 115746',
+    year: 2026,
+  },
+  {
     id: 'service-benchmarking-2025',
     title:
       'Customer-centric service benchmarking using online reviews: A case study of Bangkok hotels',
