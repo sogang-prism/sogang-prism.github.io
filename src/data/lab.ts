@@ -13,6 +13,7 @@ export interface Project {
   id: string;
   title: string;
   period: string;
+  periodNote?: string;
   tags?: string[];
   funder?: string;
   note?: string;
@@ -181,8 +182,10 @@ export const projects: Project[] = [
     titleKorean: '서울 앵커 10 챌린지 - 재난 AI 기술',
     title: 'Seoul ANCHOR 10 Challenge - Disaster AI Technologies',
     period: 'Aug 2026 – Feb 2028',
+    periodNote: '(2 + 7 years)',
     tags: ['Ongoing'],
-    note: '2 + 7 years',
+    funder: 'Seoul Metropolitan Government',
+    note: 'Collaborative Research',
   },
   {
     id: 'climate-technology-knowledge-exchange',

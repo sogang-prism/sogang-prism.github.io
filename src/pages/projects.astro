@@ -15,6 +15,9 @@ import { sitePath } from '../lib/links';
           <article class="project" id={project.id}>
             <div class="project-period-column">
               <p class="project-period">{project.period}</p>
+              {project.periodNote && (
+                <p class="project-period-note">{project.periodNote}</p>
+              )}
               {project.tags && project.tags.length > 0 && (
                 <div class="project-tags" aria-label="Project classifications">
                   {project.tags.map((tag) => (
@@ -74,6 +77,12 @@ import { sitePath } from '../lib/links';
     color: var(--blue);
     font-size: 0.875rem;
     padding-top: 2px;
+  }
+  .project-period-note {
+    color: var(--muted);
+    font-size: 0.6875rem;
+    line-height: 1.4;
+    margin-top: 3px;
   }
   .project-tags {
     display: flex;
