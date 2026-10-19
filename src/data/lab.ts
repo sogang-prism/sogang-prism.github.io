@@ -200,7 +200,7 @@ export const projects: Project[] = [
     titleKorean: '첨단전략산업 글로벌 기술경영 전문인력 양성사업',
     title:
       'Global Talent Development Program in Technology Management for Advanced Strategic Industries',
-    period: '2025 – 2030',
+    period: 'Mar 2025 – Feb 2030',
     tags: ['Ongoing', 'Education & Training'],
     funder: 'Korea Institute for Advancement of Technology (KIAT)',
   },
