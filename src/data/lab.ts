@@ -13,6 +13,7 @@ export interface Project {
   id: string;
   title: string;
   period: string;
+  tags?: string[];
   funder?: string;
   note?: string;
   description?: string;
@@ -171,8 +172,17 @@ export const projects: Project[] = [
     title:
       'Domain-Normative Alignment of Large Language Models: Diagnosing Structural Misalignment and Causal Constraint-Based Correction in Technology Valuation',
     period: 'Sep 2026 – Aug 2029',
+    tags: ['Ongoing'],
     funder: 'National Research Foundation of Korea (NRF)',
     note: 'Principal Investigator',
+  },
+  {
+    id: 'seoul-anchor-disaster-ai-technologies',
+    titleKorean: '서울 앵커 10 챌린지 - 재난 AI 기술',
+    title: 'Seoul ANCHOR 10 Challenge - Disaster AI Technologies',
+    period: 'Aug 2026 – Feb 2028',
+    tags: ['Ongoing'],
+    note: '2 + 7 years',
   },
   {
     id: 'climate-technology-knowledge-exchange',
@@ -180,8 +190,18 @@ export const projects: Project[] = [
     title:
       'Knowledge Exchange and Innovation in Climate Technology Ecosystems: An Empirical Study Using Patent and Bibliometric Data',
     period: 'Jun 2025 – May 2028',
+    tags: ['Ongoing'],
     funder: 'National Research Foundation of Korea (NRF)',
     note: 'Collaborative Research',
+  },
+  {
+    id: 'global-strategic-industries-technology-management',
+    titleKorean: '첨단전략산업 글로벌 기술경영 전문인력 양성사업',
+    title:
+      'Global Talent Development Program in Technology Management for Advanced Strategic Industries',
+    period: '2025 – 2030',
+    tags: ['Ongoing', 'Education & Training'],
+    funder: 'Korea Institute for Advancement of Technology (KIAT)',
   },
   {
     id: 'data-valuation-framework',
@@ -248,17 +268,6 @@ export const projects: Project[] = [
     period: 'Sep 2019 – Aug 2020',
     funder: 'National Research Foundation of Korea (NRF)',
     note: 'Principal Investigator',
-  },
-];
-
-export const educationPrograms: Project[] = [
-  {
-    id: 'global-strategic-industries-technology-management',
-    titleKorean: "첨단전략산업 글로벌 기술경영 전문인력 양성사업",
-    title:
-      'Global Talent Development Program in Technology Management for Advanced Strategic Industries',
-    period: '2025 – 2030',
-    funder: 'Korea Institute for Advancement of Technology (KIAT)',
   },
 ];
 
