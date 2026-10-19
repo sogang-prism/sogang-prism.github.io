@@ -185,7 +185,6 @@ export const projects: Project[] = [
     periodNote: '(2 + 7 years)',
     tags: ['Ongoing'],
     funder: 'Seoul Metropolitan Government',
-    note: 'Collaborative Research',
   },
   {
     id: 'climate-technology-knowledge-exchange',
@@ -195,7 +194,6 @@ export const projects: Project[] = [
     period: 'Jun 2025 – May 2028',
     tags: ['Ongoing'],
     funder: 'National Research Foundation of Korea (NRF)',
-    note: 'Collaborative Research',
   },
   {
     id: 'global-strategic-industries-technology-management',
