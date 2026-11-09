@@ -301,7 +301,7 @@ export const members: Member[] = [
     name: 'Yongwoo Lee',
     group: 'ms-students',
     admissionYear: '2025',
-    program: "MOT Master's Program",
+    program: 'MOT',
     organization: 'INZENT Co.,Ltd.',
   },
   {
@@ -309,7 +309,7 @@ export const members: Member[] = [
     name: 'Sejin Yang',
     group: 'ms-students',
     admissionYear: '2025',
-    program: "MOT Master's Program",
+    program: 'MOT',
     organization: 'DSsolar',
   },
   {
@@ -317,7 +317,7 @@ export const members: Member[] = [
     name: 'Ilbum Chun',
     group: 'ms-students',
     admissionYear: '2025',
-    program: "MOT Master's Program",
+    program: 'MOT',
     organization: 'KT',
   },
   {
@@ -325,7 +325,7 @@ export const members: Member[] = [
     name: 'Riahn Kim',
     group: 'ms-students',
     admissionYear: '2025',
-    program: "MOT Master's Program",
+    program: 'MOT',
     organization: 'KIAS',
   },
   {
@@ -333,8 +333,16 @@ export const members: Member[] = [
     name: 'Suyeon Kim',
     group: 'ms-students',
     admissionYear: '2025',
-    program: "MOT Master's Program",
+    program: 'MOT',
     organization: 'NIPA',
+  },
+  {
+    id: 'minho-kim',
+    name: 'Minho Kim',
+    group: 'ms-students',
+    admissionYear: '2026',
+    program: 'AI Behavioral Science',
+    organization: 'Full-time Student',
   },
 ];
 

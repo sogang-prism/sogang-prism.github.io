@@ -20,6 +20,11 @@ const groups = [
         const people = members.filter((member) => member.group === group.id);
         return (
           <section class="person-group" aria-labelledby={group.id}>
+            {group.id === 'phd-students' && (
+              <p class="program-legend">
+                MOT = Graduate School of Management of Technology
+              </p>
+            )}
             <h2 class="group-heading" id={group.id}>
               {group.title}
             </h2>
@@ -49,3 +54,13 @@ const groups = [
     </section>
   </div>
 </Layout>
+
+<style>
+  .program-legend {
+    color: var(--muted);
+    font-size: 0.6875rem;
+    line-height: 1.5;
+    margin-bottom: 6px;
+    text-align: right;
+  }
+</style>
