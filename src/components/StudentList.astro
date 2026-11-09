@@ -24,7 +24,17 @@ const { students, labelledBy } = Astro.props;
           <th scope="row">{student.name}</th>
           <td>
             {student.program ? (
-              <span class="student-program-tag">{student.program}</span>
+              <span
+                class:list={[
+                  'student-program-tag',
+                  {
+                    'student-program-tag-ai':
+                      student.program === 'AI Behavioral Science',
+                  },
+                ]}
+              >
+                {student.program}
+              </span>
             ) : '—'}
           </td>
           <td>{student.organization || '—'}</td>
@@ -81,6 +91,10 @@ const { students, labelledBy } = Astro.props;
     font-weight: 500;
     line-height: 1.45;
     vertical-align: top;
+  }
+  .student-program-tag-ai {
+    background: #f1edf7;
+    color: #6d4c7d;
   }
   tbody th {
     font-weight: 500;
