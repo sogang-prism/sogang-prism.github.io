@@ -4,6 +4,9 @@ interface Props {
   alumni: Alumnus[];
 }
 const { alumni } = Astro.props;
+const sortedAlumni = [...alumni].sort(
+  (a, b) => Number(b.year) - Number(a.year),
+);
 ---
 
 <div class="alumni-table-wrap">
@@ -18,8 +21,8 @@ const { alumni } = Astro.props;
     </thead>
     <tbody>
       {
-        alumni.length > 0 ? (
-          alumni.map((person) => (
+        sortedAlumni.length > 0 ? (
+          sortedAlumni.map((person) => (
             <tr id={person.id}>
               <td>{person.year || '—'}</td>
               <th scope="row">{person.name}</th>

@@ -506,7 +506,7 @@ export const alumni: Alumnus[] = [
     "id": "jin-young-seo",
     "name": "Jin-young Seo",
     "course": "MOT Master's Program",
-    "year": "2026",
+    "year": "2027",
     "project": "Development of a Data-Driven System for Designing Interdisciplinary and Self-Designed Majors through Alignment Analysis between Emerging Technologies and University Curricula",
     "projectKorean": "유망기술과 대학 교육과정 간 정합성 분석을 통한 데이터 기반 융합·자율전공 설계 시스템 개발"
   },
