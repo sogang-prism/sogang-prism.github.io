@@ -326,7 +326,7 @@ export const members: Member[] = [
     group: 'ms-students',
     admissionYear: '2025.9',
     program: 'MOT',
-    organization: 'KIAS',
+    organization: 'KIAS (고등과학원)',
   },
   {
     id: 'suyeon-kim',
@@ -334,7 +334,7 @@ export const members: Member[] = [
     group: 'ms-students',
     admissionYear: '2025.9',
     program: 'MOT',
-    organization: 'NIPA',
+    organization: 'NIPA (정보통신산업진흥원)',
   },
   {
     id: 'minho-kim',
